@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" content="notranslate" />
+    <title>Resume Buider</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="resume-form">
+      <h1 class="text-center my-2">Resume Builder</h1>
+      <p class="text-center">By Nihit Mishra</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Personal Info</h3>
+
+          <div class="form-group">
+            <label for="namespace">Your Name</label>
+            <input
+              type="text"
+              id="namespace"
+              placeholder="Enter your name"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="contactspace">Your Contact</label>
+            <input
+              type="text"
+              id="contactspace"
+              placeholder="Enter your contact"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="addressspace">Your Address</label>
+            <textarea
+              id="addressspace"
+              placeholder="Enter your address"
+              class="form-control"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <p class="secondary-text my-3">Important Links</p>
+
+          <div class="form-group mt-2">
+            <label for="fbfield">Your FB Id</label>
+            <input
+              type="text"
+              id="fbfield"
+              placeholder="Enter here"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="igfield">Your Instagram Handle</label>
+            <input
+              type="text"
+              id="igfield"
+              placeholder="Enter here"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="linkedinfield">Your LinkedIn Id</label>
+            <input
+              type="text"
+              id="linkedinfield"
+              placeholder="Enter here"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3>Professional Info</h3>
+
+          <div class="form-group mt-3 mb-3">
+            <label for="objectivefield">Objective</label>
+            <textarea
+              id="objectivefield"
+              placeholder="Enter here"
+              class="form-control"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <div class="form-group mt-2" id="we">
+            <label for="experiencefield">Your Past Work-Experience</label>
+            <textarea
+              id="experiencefield"
+              placeholder="Enter here"
+              class="form-control wefield"
+              rows="3"
+            ></textarea>
+            <div class="container text-center mt-3" id="PWEadd">
+              <button onclick="addnewWeField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group mt-2" id="aq">
+            <label for="academicfield">Academic Qualifications</label>
+            <textarea
+              id="academicfield"
+              placeholder="Enter here"
+              class="form-control aqfield"
+              rows="3"
+            ></textarea>
+            <div class="container text-center mt-3" id="AQadd">
+              <button onclick="addnewAQField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center mt-4">
+        <button onclick="generateResume()" class="btn btn-primary btn-lg">
+          Generate Resume
+        </button>
+      </div>
+    </div>
+
+    <div class="container" id="resume-template">
+      <div class="row">
+        <div class="col-md-4 text-center leftOfResume">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            class="img-fluid myimg mt-4"
+          />
+
+          <div class="container">
+            <p id="nameT">Nihit Mishra</p>
+            <p id="contactT">7718902xxx3 , 098765xxx9</p>
+            <p id="addressT">Mannat Villa</p>
+
+            <hr />
+
+            <p id="fbT">
+              <a href="#1">https://www.facebook.com/xyz</a>
+            </p>
+            <p id="igT"><a href="">https://www.instagram.com/xyz</a></p>
+            <p id="linkedinT">
+              <a href="">https://www.linkedin.com/nihitmishra</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <h1 class="text-center" style="font-weight: bolder" id="nameT2">
+            Nihit Mishra
+          </h1>
+
+          <div class="card mt-4">
+            <div class="card-header backgroundOfCards">
+              <h3>Objective</h3>
+            </div>
+            <div class="card-body">
+              <p id="objectiveT">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptates deleniti quaerat ad enim quasi voluptatibus, corporis
+                temporibus. Labore aliquam eos reiciendis aperiam soluta, nobis
+                inventore ad blanditiis? Dignissimos odit accusamus, veritatis
+                ab quo incidunt assumenda ducimus quibusdam quisquam cumque
+                dolore pariatur corrupti inventore fugiat commodi voluptate
+                sint. Aliquid, debitis! Non.
+              </p>
+            </div>
+          </div>
+
+          <div class="card mt-4">
+            <div class="card-header backgroundOfCards">
+              <h3>Work-Experience</h3>
+            </div>
+            <div class="card-body">
+              <ul id="we-T">
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam,
+                  quas.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam,
+                  quas.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam,
+                  quas.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card mt-4">
+            <div class="card-header backgroundOfCards">
+              <h3>Academic Qualifications</h3>
+            </div>
+            <div class="card-body">
+              <ul id="AQ-T">
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam,
+                  quas.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam,
+                  quas.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam,
+                  quas.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="container mt-3 text-center">
+            <button onclick="printResume()" class="btn backgroundOfCards">
+              Print Resume
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

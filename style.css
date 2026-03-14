@@ -1,0 +1,16 @@
+#resume-template {
+  display: none;
+}
+
+.myimg {
+  border-radius: 50%;
+  width: 200px;
+}
+
+.leftOfResume {
+  background-color: rgb(4, 210, 210);
+}
+
+.backgroundOfCards {
+  background-color: rgb(4, 210, 210);
+}
